@@ -15,7 +15,8 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-import UserItem from "../components/shared/Useritem";
+// import UserItem from "../components/shared/UserItem";
+
 import {
   KeyboardBackspaceSharp,
   Menu,
@@ -36,6 +37,8 @@ import { useAsyncMutation, useError } from "../hook/hook";
 import Loader from "../components/layout/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { setAddMember } from "../redux/reduser/misc";
+import UserItem from "../components/shared/Useritem";
+
 const ConfirmDeleteDialog = lazy(() =>
   import("../components/dialog/ConfirmDeleteDialog")
 );
