@@ -4,7 +4,7 @@ import { Avatar, IconButton, ListItem, Stack, Typography } from "@mui/material";
 import { memo } from "react";
 import { transformImage } from "../../lib/feactures";
 
-const UserItem = ({ user, handler, handlerIsLoading ,isadded,styling}) => {
+const Useritem = ({ user, handler, handlerIsLoading ,isadded,styling}) => {
     const {name,_id,avatar}=user
     // console.log(user,"userrrrrr");
   return (
@@ -49,4 +49,4 @@ const UserItem = ({ user, handler, handlerIsLoading ,isadded,styling}) => {
   );
 };
 
-export default memo(UserItem);
+export default memo(Useritem);

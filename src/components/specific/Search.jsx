@@ -11,7 +11,7 @@ import {
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useInputValidation } from "6pp";
-import UserItem from "../shared/Useritem";
+import Useritem from "../shared/Useritem";
 import { sampleUser } from "../constant/sample";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearch } from "../../redux/reduser/misc";
@@ -122,13 +122,13 @@ const Search = () => {
           <List>
             {user?.map((user) => {
               return (
-                <UserItem
+                <Useritem
                   key={user._id}
                   user={user}
                   handler={addFriendHandle}
                   handlerIsLoading={isLoading}
                   isadded={addedUser.includes(user._id)}
-                ></UserItem>
+                ></Useritem>
               );
             })}
           </List>

@@ -37,7 +37,8 @@ import { useAsyncMutation, useError } from "../hook/hook";
 import Loader from "../components/layout/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { setAddMember } from "../redux/reduser/misc";
-import UserItem from "../components/shared/Useritem";
+import Useritem from "../components/shared/Useritem";
+
 
 const ConfirmDeleteDialog = lazy(() =>
   import("../components/dialog/ConfirmDeleteDialog")
@@ -297,7 +298,7 @@ const Groups = () => {
                   <>
                     {members.map((user, index) => {
                       return (
-                        <UserItem
+                        <Useritem
                           key={user._id}
                           user={user}
                           isadded={true}

@@ -32,7 +32,7 @@ import { removeNewMessageAlert } from "../redux/reduser/chat";
 import Typing from "../components/layout/Typing";
 import { useNavigate } from "react-router-dom";
 import img from "../assets/bg2.jpg";
-import { getSocket } from "../../socket.jsx";
+import { getSocket } from "../../socket";
 
 
 const Chat = ({ chatId }) => {
