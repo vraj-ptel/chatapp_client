@@ -12,12 +12,14 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { sampleChats } from "../constant/sample";
-import Useritem from "../shared/Useritem";
+// import Useritem from "../shared/Useritem";
+
 import { scrlBar } from "../constant/color";
 import { useDispatch, useSelector } from "react-redux";
 import { setAddMember } from "../../redux/reduser/misc";
 import { useAsyncMutation, useError } from "../../hook/hook";
 import { useAddMembersMutation, useAvailableFriendsQuery } from "../../redux/api/api";
+import UserItems from "../shared/UserItems";
 
 const AddMemberDialog = ({  chatId }) => {
     const dispatch=useDispatch();
@@ -83,7 +85,7 @@ const AddMemberDialog = ({  chatId }) => {
                 {data?.friends.map((user, index) => {
                   // console.log(user);
                   return (
-                    <Useritem
+                    <UserItems
                       user={user}
                       key={index}
                       handler={selectMemberHandler}

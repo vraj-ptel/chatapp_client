@@ -11,7 +11,7 @@ import {
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useInputValidation } from "6pp";
-import Useritem from "../shared/Useritem";
+
 import { sampleUser } from "../constant/sample";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearch } from "../../redux/reduser/misc";
@@ -21,6 +21,7 @@ import {
 } from "../../redux/api/api";
 import { useAsyncMutation } from "../../hook/hook";
 import { scrlBar } from "../constant/color";
+import UserItems from "../shared/UserItems";
 
 const Search = () => {
   // const [isSearch,setIsSearch]=useState(s);
@@ -122,13 +123,13 @@ const Search = () => {
           <List>
             {user?.map((user) => {
               return (
-                <Useritem
+                <UserItems
                   key={user._id}
                   user={user}
                   handler={addFriendHandle}
                   handlerIsLoading={isLoading}
                   isadded={addedUser.includes(user._id)}
-                ></Useritem>
+                ></UserItems>
               );
             })}
           </List>

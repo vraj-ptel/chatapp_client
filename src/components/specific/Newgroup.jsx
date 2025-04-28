@@ -11,13 +11,15 @@ import {
 import { useInputValidation } from "6pp";
 import React, { useState } from "react";
 import { sampleUser } from "../constant/sample";
-import Useritem from "../shared/Useritem";
+// import Useritem from "../shared/Useritem";
+
 import { useDispatch,useSelector } from "react-redux";
 import { useAvailableFriendsQuery, useCreateGroupMutation } from "../../redux/api/api";
 import { useAsyncMutation, useError } from "../../hook/hook";
 import { setNewGroup } from "../../redux/reduser/misc";
 import toast from "react-hot-toast";
 import { scrlBar } from "../constant/color";
+import UserItems from "../shared/UserItems";
 
 
 const Newgroup = ({ n }) => {
@@ -74,13 +76,13 @@ const Newgroup = ({ n }) => {
           <List>
             {isLoading?<Skeleton/>: data?.friends?.map((user) => {
               return (
-                <Useritem
+                <UserItems
                   key={user._id}
                   user={user}
                   handler={selectMemberHandler}
                   handlerIsLoading={isLoading}
                   isadded={members.includes(user._id)}
-                ></Useritem>
+                ></UserItems>
               );
             })}
           </List>
