@@ -15,7 +15,7 @@ import {
   Tooltip,
   Typography,
 } from "@mui/material";
-// import UserItem from "../components/shared/UserItem";
+
 
 import {
   KeyboardBackspaceSharp,
@@ -37,7 +37,10 @@ import { useAsyncMutation, useError } from "../hook/hook";
 import Loader from "../components/layout/Loader";
 import { useDispatch, useSelector } from "react-redux";
 import { setAddMember } from "../redux/reduser/misc";
-import Useritem from "../components/shared/Useritem";
+// import Useritem from "../components/shared/Useritem";
+import UserItems from "../components/shared/UserItems";
+
+
 
 
 const ConfirmDeleteDialog = lazy(() =>
@@ -298,7 +301,7 @@ const Groups = () => {
                   <>
                     {members.map((user, index) => {
                       return (
-                        <Useritem
+                        <UserItems
                           key={user._id}
                           user={user}
                           isadded={true}
